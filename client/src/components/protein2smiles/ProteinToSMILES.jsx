@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './ProteinToSMILES.css';
 
 function App() {
   const [protein, setProtein] = useState('');
