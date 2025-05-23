@@ -2,3 +2,6 @@
 *.h5 filter=lfs diff=lfs merge=lfs -text
 *.pt filter=lfs diff=lfs merge=lfs -text
 *.tar.gz filter=lfs diff=lfs merge=lfs -text
+*.nii.gz filter=lfs diff=lfs merge=lfs -text
+*.pth filter=lfs diff=lfs merge=lfs -text
+client/src/components/Drug/latest filter=lfs diff=lfs merge=lfs -text
