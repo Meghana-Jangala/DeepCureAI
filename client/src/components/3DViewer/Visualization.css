@@ -1,0 +1,135 @@
+.visualization-container {
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.visualization-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.visualization-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.4rem;
+  color: #00e6a2;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.visualization-header p {
+  font-size: 1.1rem;
+  color: #bbbbbb;
+}
+
+.visualization-main {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background: #111;
+  box-shadow: 0 0 20px rgba(0, 230, 162, 0.08);
+  transition: all 0.3s ease;
+}
+
+.upload-area {
+  border: 2px dashed #444;
+  border-radius: 16px;
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  color: #bbb;
+}
+
+.upload-area.active,
+.upload-area:hover {
+  border-color: #00e6a2;
+  background-color: #262626;
+  color: #00e6a2;
+  box-shadow: 0 0 10px rgba(0, 230, 162, 0.2);
+}
+
+.browse-button {
+  display: inline-block;
+  font-weight: 600;
+  padding: 0.6rem 1.6rem;
+  border-radius: 30px;
+  background-color: #00e6a2;
+  color: #121212;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+}
+
+.browse-button:hover {
+  background-color: #00c796;
+  transform: translateY(-1px);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.error-message {
+  margin-top: 0.75rem;
+  color: #ff4c4c;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.predict-button {
+  padding: 0.9rem 2rem;
+  background-color: #00e6a2;
+  border: none;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #121212;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  user-select: none;
+  align-self: center;
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0, 230, 162, 0.2);
+}
+
+.predict-button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+  color: #999;
+  box-shadow: none;
+}
+
+.predict-button:not(:disabled):hover {
+  background-color: #00b889;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 230, 162, 0.3);
+}
+
+@media (max-width: 520px) {
+  .visualization-main {
+    max-width: 100%;
+    padding: 1rem 0.5rem;
+  }
+
+  .upload-area {
+    padding: 2rem 0.5rem;
+  }
+
+  .predict-button {
+    width: 100%;
+  }
+}

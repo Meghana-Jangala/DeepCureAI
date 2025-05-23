@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-// import './Visualization.css';
+import './Visualization.css';
 
 const ThreeDViewer = () => {
     const [selectedFile, setSelectedFile] = useState(null);
