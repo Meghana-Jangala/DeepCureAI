@@ -1,0 +1,79 @@
+.mobile-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-image: linear-gradient(black, #323f4b);
+}
+
+/* Left animation side */
+.mobile-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.lottie-animation {
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Right form side */
+.mobile-right {
+    flex: 1;
+    background-color: #edf5f3;
+    border-radius: 20px;
+    margin: 40px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-head {
+    font-size: 28px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.input {
+    outline: none;
+    border: none;
+    width: 370px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #bfdad3;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Button styling */
+.green_btn {
+    border: none;
+    outline: none;
+    padding: 12px 0;
+    background-color: #3bb19b;
+    color: white;
+    border-radius: 20px;
+    width: 180px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+/* Error message */
+.error_msg {
+    width: 370px;
+    padding: 15px;
+    margin: 5px 0;
+    font-size: 14px;
+    background-color: #f34646;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}

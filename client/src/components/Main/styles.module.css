@@ -1,0 +1,192 @@
+.main_container {
+    background-color: #0e1525;
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content_container {
+    padding: 20px;
+}
+
+/* Navbar Styles */
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    background-color: #3b62b1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky; /* ✅ Make it sticky */
+    top: 0;             /* ✅ Stick to the top */
+    z-index: 1000;      /* Ensure it's above content */
+}
+
+
+.navbar h1 {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Desktop Logout Button */
+.white_btn {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background-color: white;
+    color: #3b62b1;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.white_btn:hover {
+    background-color: #ffffffcc;
+}
+
+/* Nav Links */
+.nav_links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav_links span {
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    transition: opacity 0.3s ease;
+}
+
+.nav_links span:hover {
+    opacity: 0.8;
+}
+
+.nav_links .active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown_toggle {
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
+
+.dropdown_menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #293b5f;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    min-width: 160px;
+    z-index: 2000;
+}
+
+.dropdown_menu span {
+    padding: 10px 16px;
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.dropdown_menu span:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Hamburger Icon */
+.menu_icon {
+    display: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile Logout */
+.mobile_logout_btn {
+    display: none;
+    background-color: white;
+    color: #3b62b1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu_icon {
+        display: block;
+    }
+
+    .white_btn {
+        display: none;
+    }
+
+    .mobile_logout_btn {
+        display: block;
+    }
+
+    .nav_links {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #3b62b1;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 20px;
+        gap: 20px;
+        display: none;
+    }
+
+    .nav_links.open {
+        display: flex;
+    }
+
+    .nav_links span {
+        margin-left: 20px;
+    }
+
+    .dropdown_menu {
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        min-width: unset;
+    }
+
+    .dropdown_menu span {
+        padding: 8px 20px;
+    }
+}
+
+/* ✨ NEW STYLES TO ENSURE CARD TEXT VISIBILITY */
+.card h3 {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+.card p {
+    color: #d0d0d0 !important;
+    font-weight: 500;
+}

@@ -1,0 +1,271 @@
+.lung-bg-con {
+    background-color: #0c0e1a;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.lung-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #1a1d2e;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    color: #dce3f0;
+}
+
+.lung-header {
+    padding: 2rem;
+    text-align: center;
+    background: linear-gradient(to right, #1e1e2f, #5a32ea);
+    color: #ffffff;
+}
+
+.lung-title {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.lung-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.85;
+}
+
+.lung-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.lung-upload-panel, .lung-result-panel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.lung-upload-box {
+    border: 1px solid #333852;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: #242842;
+}
+
+.lung-upload-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: #e5efff;
+    text-align: center;
+}
+
+.lung-drop-zone {
+    border: 2px dashed #45518d;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1d2e;
+    margin-bottom: 1.5rem;
+}
+
+.lung-drop-zone:hover {
+    border-color: #7c3aed;
+    background-color: #2a2f4f;
+}
+
+.lung-upload-icon {
+    width: 48px;
+    height: 48px;
+    color: #7c3aed;
+    margin-bottom: 1rem;
+}
+
+.lung-drop-text {
+    color: #a0aec0;
+    font-size: 1rem;
+}
+
+.lung-preview-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.lung-file-input {
+    display: none;
+}
+
+.lung-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.lung-action-button {
+    background: linear-gradient(to right, #0ea5e9, #7c3aed);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+    max-width: 180px;
+}
+
+.lung-action-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.4);
+}
+
+.lung-disabled-button {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: linear-gradient(to right, #60a5fa, #a78bfa);
+}
+
+.lung-disabled-button:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.lung-reset-button {
+    background-color: #374151;
+    color: #d1d5db;
+    border: 1px solid #4b5563;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.lung-reset-button:hover {
+    background-color: #4b5563;
+}
+
+.lung-error-message {
+    color: #f87171;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background-color: #3b1f25;
+    border-radius: 6px;
+    border-left: 4px solid #ef4444;
+    font-size: 0.9rem;
+}
+
+.lung-result-panel {
+    border: 1px solid #333852;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: #242842;
+}
+
+.lung-result-header {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.lung-result-title {
+    font-size: 1.3rem;
+    color: #e5efff;
+}
+
+.lung-result-images {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lung-result-image-item {
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.lung-result-image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.lung-segmentation-image {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.lung-image-caption {
+    margin-top: 0.5rem;
+    color: #a0aec0;
+    font-weight: 600;
+}
+
+.lung-result-note {
+    background-color: #1e293b;
+    border-left: 4px solid #0ea5e9;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border-radius: 0 6px 6px 0;
+}
+
+.lung-download-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lung-download-button {
+    background-color: #0ea5e9;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.lung-download-button:hover {
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
+.lung-empty-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.lung-empty-icon {
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.lung-empty-text {
+    color: #a0aec0;
+    text-align: center;
+}

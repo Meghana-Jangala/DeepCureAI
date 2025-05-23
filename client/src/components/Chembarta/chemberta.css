@@ -1,0 +1,214 @@
+/* ChembertDark.css */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0e0e10;
+    color: #f0f0f5;
+    overflow-x: hidden;
+  }
+  
+  .chembert-container {
+    position: relative;
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .molecule {
+    position: absolute;
+    background: linear-gradient(45deg, #00d2ff, #3a47d5);
+    border-radius: 50%;
+    opacity: 0.2;
+    animation: float 30s linear infinite alternate;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100vh); }
+  }
+  
+  .card {
+    position: relative;
+    z-index: 1;
+    background: #1a1a1d;
+    border: 1px solid #3a47d5;
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 0 20px #3a47d5;
+    text-align: center;
+  }
+  
+  .header .icon {
+    color: #00d2ff;
+    width: 48px;
+    height: 48px;
+  }
+  
+  .header h1 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .header p {
+    color: #aaa;
+    font-size: 1rem;
+  }
+  
+  .info-box {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #222;
+    border-left: 4px solid #00d2ff;
+    position: relative;
+  }
+  
+  .info-icon {
+    color: #00d2ff;
+    margin-right: 0.5rem;
+  }
+  
+  .close-info {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    color: #888;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .form {
+    margin-top: 1rem;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    background: #2a2a2d;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .input-icon {
+    margin-right: 0.5rem;
+    color: #777;
+  }
+  
+  input[type='text'] {
+    background: transparent;
+    border: none;
+    color: #f0f0f5;
+    width: 100%;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .submit-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #3a47d5;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background: #00d2ff;
+  }
+  
+  .dropdown button {
+    background: #2a2a2d;
+    color: #f0f0f5;
+    padding: 0.7rem 1rem;
+    border: 1px solid #444;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  
+  .dropdown-menu {
+    margin-top: 0.5rem;
+    background: #2a2a2d;
+    border: 1px solid #444;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .dropdown-menu button {
+    width: 100%;
+    padding: 0.8rem;
+    background: none;
+    border: none;
+    color: #f0f0f5;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  .dropdown-menu button:hover {
+    background: #3a47d5;
+  }
+  
+  .error {
+    margin-top: 1rem;
+    color: #ff4c4c;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .results {
+    margin-top: 2rem;
+    background: #222;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  .results h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .prediction {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .footer {
+    margin-top: 3rem;
+    padding: 1rem;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  

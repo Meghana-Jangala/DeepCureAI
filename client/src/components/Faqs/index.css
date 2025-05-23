@@ -1,0 +1,97 @@
+/* index.css */
+
+.faqs-main-container {
+  min-height: 100vh;
+  background-color: #121212; /* Deep dark background */
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.faqs-inner {
+  width: 100%;
+  max-width: 900px;
+  background-color: #1e1e1e; /* Slightly lighter than background */
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1); /* Soft neon glow */
+}
+
+.faqs-title {
+  color: #00ffe0; /* Aqua bright for title */
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+.faqs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.faq-item {
+  background-color: #262626; /* Dark card */
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: #2f2f2f; /* Slightly lighter on hover */
+}
+
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.faq-question {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.faq-toggle {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.faq-answer {
+  padding: 0 20px 20px 20px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.faq-answer p {
+  color: #bbbbbb;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+.faq-separator {
+  border: none;
+  border-top: 1px solid #333333;
+  margin: 0 0 15px 0;
+}
+
+/* Smooth fade in animation for the answer */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

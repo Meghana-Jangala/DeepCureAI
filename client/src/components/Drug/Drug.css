@@ -1,0 +1,198 @@
+/* ===============================
+   Global Styles
+=============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #12121c;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+/* ===============================
+   Layout
+=============================== */
+
+.Drug {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #00ffe0;
+  margin-bottom: 2rem;
+}
+
+/* ===============================
+   Input + Button Group
+=============================== */
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+input {
+  padding: 0.75rem 1rem;
+  width: 300px;
+  font-size: 1rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #1e1e2e;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #00ffe0;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background-color: #00ffe0;
+  color: #12121c;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #00bfa5;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   Loader Animation
+=============================== */
+
+.loader-container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loader {
+  border: 5px solid #2d2d44;
+  border-top: 5px solid #00ffe0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===============================
+   Error
+=============================== */
+
+.error-text {
+  color: #ff4c4c;
+  margin-top: 10px;
+}
+
+/* ===============================
+   Definitions Box
+=============================== */
+
+.definitions {
+  background-color: #1e1e2e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 700px;
+  text-align: left;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.05);
+}
+
+.definitions h3 {
+  color: #00ffe0;
+  margin-bottom: 10px;
+}
+
+.definitions p {
+  margin-bottom: 8px;
+  color: #bbb;
+}
+
+/* ===============================
+   Molecule Card Layout
+=============================== */
+
+.molecule-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.molecule-card {
+  background-color: #1e1e2e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.molecule-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+}
+
+.molecule-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1rem 0;
+  background-color: #2d2d44;
+  padding: 8px;
+}
+
+.molecule-card p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.invalid-text {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   Responsive
+=============================== */
+
+@media (max-width: 768px) {
+  .input-group {
+    flex-direction: column;
+  }
+
+  input, button {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .molecule-card {
+    width: 100%;
+  }
+}

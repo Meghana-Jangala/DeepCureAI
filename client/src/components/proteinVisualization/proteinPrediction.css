@@ -1,0 +1,219 @@
+/* ————————————————————————
+   1. Root container
+———————————————————————— */
+.protein-page {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  background-color: #121212;
+  color: #f0f0f0;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ————————————————————————
+   2. Sidebar (inputs + form)
+———————————————————————— */
+.protein-page .sidebar {
+  width: 300px;
+  min-width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1e1e1e;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  z-index: 100;
+  box-sizing: border-box;
+  color: #f0f0f0;
+}
+
+/* Form elements */
+.protein-page .sidebar input,
+.protein-page .sidebar textarea,
+.protein-page .sidebar select {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  font-family: monospace;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.protein-page .sidebar input::placeholder,
+.protein-page .sidebar textarea::placeholder {
+  color: #aaaaaa;
+}
+
+/* ————————————————————————
+   3. Main content (viewer + results)
+———————————————————————— */
+.protein-page .main-content {
+  margin-left: 300px;
+  width: calc(100% - 300px);
+  padding: 20px;
+  background-color: #1c1c1c;
+  box-sizing: border-box;
+  min-height: 100vh;
+  color: #f0f0f0;
+}
+
+/* ————————————————————————
+   4. 3D Viewer
+———————————————————————— */
+.protein-page .protein-viewer-container {
+  width: 100%;
+  height: 60vh;
+  max-height: 600px;
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+.protein-page .protein-viewer-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* ————————————————————————
+   5. pLDDT Score
+———————————————————————— */
+.protein-page .plddt-value {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #00e6a2;
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Improve text visibility inside pLDDT and result cards */
+.protein-page .prediction-results h3,
+.protein-page .prediction-results p,
+.protein-page .plddt-value p {
+  color: #e0e0e0;
+  font-weight: 600;
+}
+
+/* ————————————————————————
+   6. Buttons & form-controls
+———————————————————————— */
+.protein-page .form-control {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  box-sizing: border-box;
+}
+
+.protein-page .form-control:focus {
+  outline: none;
+  border-color: #00b894;
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+.protein-page .btn-primary {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 0.7rem 1.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid #00b894;
+  background-color: #00b894;
+  color: #121212;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.protein-page .btn-primary:hover {
+  background-color: #00a383;
+  border-color: #00a383;
+}
+
+/* ————————————————————————
+   7. Alerts & Results
+———————————————————————— */
+.protein-page .alert {
+  margin-top: 20px;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #2c2c2c;
+  border: 1px solid #444;
+  color: #f8f9fa;
+}
+
+.protein-page .prediction-results {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+  color: #f0f0f0;
+}
+
+/* ————————————————————————
+   8. Utility: Centered text
+———————————————————————— */
+.protein-page .center-text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* ————————————————————————
+   9. Responsive tweaks
+———————————————————————— */
+@media (max-width: 768px) {
+  .protein-page {
+    flex-direction: column;
+  }
+
+  .protein-page .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+
+  .protein-page .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .protein-page .protein-viewer-container {
+    height: auto;
+    max-height: 50vh;
+  }
+}
+
+/* ————————————————————————
+   10. Link Styling
+———————————————————————— */
+.protein-page a {
+  color: #4aa3ff;
+  text-decoration: none;
+}
+
+.protein-page a:hover {
+  color: #7fcaff;
+  text-decoration: underline;
+}
