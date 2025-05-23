@@ -1,37 +1,35 @@
 import React, { useEffect, useRef } from 'react';
-import './ProteinViewer.css'; // <- Make sure this CSS file exists
+import './ProteinViewer.css';
 
 const ProteinViewer = ({ pdbData }) => {
   const viewerRef = useRef(null);
+  const viewerInstanceRef = useRef(null);
 
   useEffect(() => {
-    if (!pdbData || !window.$3Dmol) return;
+    if (!pdbData || !window.$3Dmol || !viewerRef.current) return;
 
-    const viewerElement = document.createElement('div');
-    viewerElement.style.width = '100%';
-    viewerElement.style.height = '400px'; // Increased height for better visibility
-    viewerRef.current.innerHTML = '';
-    viewerRef.current.appendChild(viewerElement);
+    viewerRef.current.innerHTML = ''; // Clear previous content
 
-    const viewer = window.$3Dmol.createViewer(viewerElement, {
-      backgroundColor: '#1e1e1e'
+    const viewer = window.$3Dmol.createViewer(viewerRef.current, {
+      backgroundColor: '#1e1e1e',
     });
 
     try {
       viewer.addModel(pdbData, 'pdb');
-      viewer.setStyle({ cartoon: { color: 'spectrum' } });
+      viewer.setStyle({}, { cartoon: { color: 'spectrum' } });
       viewer.zoomTo();
-      viewer.zoom(2, 800);
       viewer.spin(true);
       viewer.render();
+      viewerInstanceRef.current = viewer;
+
+      // Trigger resize to make it fill the parent
+      setTimeout(() => viewer.resize(), 100);
     } catch (error) {
       console.error('Error rendering protein:', error);
     }
 
     return () => {
-      if (viewerRef.current) {
-        viewerRef.current.innerHTML = '';
-      }
+      viewerInstanceRef.current = null;
     };
   }, [pdbData]);
 

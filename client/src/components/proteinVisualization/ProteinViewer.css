@@ -1,13 +1,16 @@
 .viewer-wrapper {
-  margin-top: 100px; /* Push viewer below the navbar */
-  padding: 20px;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  padding: 0;
   position: relative;
   z-index: 1;
 }
 
 .viewer-box {
   width: 100%;
-  height: 400px;
+  height: 100%;
+  position: relative;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
