@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Lottie from 'lottie-react';
 import "./index.css";
 import protein from "../pages/protein.json";
-import kit from "../pages/Animation - 1746722042786.json"; // ✅ updated import
+import kit from "../pages/kit.json"; // ✅ updated import
 
 const WelcomeScreen = () => {
   const navigate = useNavigate();
